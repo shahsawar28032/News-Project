@@ -5,18 +5,18 @@ if($_SESSION["user_role"] == '0'){
 ?>
   <div id="admin-content">
       <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
               <div class="col-md-12 ">
                   <h1 class="admin-heading">Add New Category</h1>
               </div>
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form Start -->
-                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
+                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
                       <div class="form-group">
-                          <label>Category Name</label>
-                          <input type="text" name="cat" class="form-control" placeholder="Category Name" required>
+                          <label class="mt-3">Category Name</label>
+                          <input type="text" name="cat" class="form-control mt-2" placeholder="Category Name" required>
                       </div>
-                      <input type="submit" name="save" class="btn btn-primary" value="Save" required />
+                      <input type="submit" name="save" class="btn btn-primary mt-4" value="Save" required />
                   </form>
                   <!-- /Form End -->
                   <?php
