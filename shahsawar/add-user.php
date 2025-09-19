@@ -30,38 +30,38 @@ if(isset($_POST['save'])){
 ?>
   <div id="admin-content">
       <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
               <div class="col-md-12">
                   <h1 class="admin-heading">Add User</h1>
               </div>
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form Start -->
-                  <form  action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST" >
+                 <form  action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST" >
                       <div class="form-group">
-                          <label>First Name</label>
-                          <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+                          <label class="mt-3">First Name</label>
+                          <input type="text" name="fname" class="form-control " placeholder="First Name" required>
                       </div>
                           <div class="form-group">
-                          <label>Last Name</label>
+                          <label class="mt-3">Last Name</label>
                           <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
                       </div>
                       <div class="form-group">
-                          <label>User Name</label>
+                          <label class="mt-3">User Name</label>
                           <input type="text" name="user" class="form-control" placeholder="Username" required>
                       </div>
 
                       <div class="form-group">
-                          <label>Password</label>
+                          <label class="mt-3">Password</label>
                           <input type="password" name="password" class="form-control" placeholder="Password" required>
                       </div>
                       <div class="form-group">
-                          <label>User Role</label>
+                          <label class="mt-3">User Role</label>
                           <select class="form-control" name="role" >
                               <option value="0">Normal User</option>
                               <option value="1">Admin</option>
                           </select>
                       </div>
-                      <input type="submit"  name="save" class="btn btn-primary" value="Save" required />
+                      <input type="submit"  name="save" class="btn btn-primary mt-4" value="Save" required />
                   </form>
                    <!-- Form End-->
                </div>
