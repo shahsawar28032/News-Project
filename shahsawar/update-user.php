@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
 ?>
   <div id="admin-content">
       <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
               <div class="col-md-12">
                   <h1 class="admin-heading">Modify User Details</h1>
               </div>
@@ -35,24 +35,24 @@ if(isset($_POST['submit'])){
                   while($row = mysqli_fetch_assoc($result)){
                 ?>
                   <!-- Form Start -->
-                  <form  action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST">
+                 <form  action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST">
                       <div class="form-group">
                           <input type="hidden" name="user_id" class="form-control" value="<?php echo $row['user_id'];  ?>">
                       </div>
                           <div class="form-group">
-                          <label>First Name</label>
+                          <label class="mt-3">First Name</label>
                           <input type="text" name="f_name" class="form-control" value="<?php echo $row['first_name'];  ?>" required>
                       </div>
                       <div class="form-group">
-                          <label>Last Name</label>
+                          <label class="mt-3">Last Name</label>
                           <input type="text" name="l_name" class="form-control" value="<?php echo $row['last_name'];  ?>" required>
                       </div>
                       <div class="form-group">
-                          <label>User Name</label>
+                          <label class="mt-3">User Name</label>
                           <input type="text" name="username" class="form-control" value="<?php echo $row['username'];  ?>" placeholder="" required>
                       </div>
                       <div class="form-group">
-                          <label>User Role</label>
+                          <label class="mt-3">User Role</label>
                           <select class="form-control" name="role" value="<?php echo $row['role']; ?>">
                             <?php
                               if($row['role'] == 1){
@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
                             ?>
                           </select>
                       </div>
-                      <input type="submit" name="submit" class="btn btn-primary" value="Update" required />
+                      <input type="submit" name="submit" class="btn btn-primary mt-4" value="Update" required />
                   </form>
                   <!-- /Form -->
                   <?php
