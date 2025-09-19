@@ -16,7 +16,7 @@ if($_SESSION["user_role"] == '0'){
 ?>
 <div id="admin-content">
   <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-md-12">
         <h1 class="admin-heading">Update Post</h1>
     </div>
@@ -37,22 +37,22 @@ if($_SESSION["user_role"] == '0'){
       ?>
         <!-- Form for show edit-->
          
-        <form action="save-update-post.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+             <form action="save-update-post.php" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="form-group">
                 <input type="hidden" name="post_id"  class="form-control" value="<?php echo $row['post_id']; ?>" placeholder="">
             </div>
             <div class="form-group">
-                <label for="exampleInputTile">Title</label>
+                <label for="exampleInputTile" class="mt-3">Title</label>
                 <input type="text" name="post_title"  class="form-control" id="exampleInputUsername" value="<?php echo $row['title']; ?>">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1"> Description</label>
+                <label for="exampleInputPassword1" class="mt-3"> Description</label>
                 <textarea name="postdesc" class="form-control"  required rows="5">
                     <?php echo $row['description']; ?>
                 </textarea>
             </div>
             <div class="form-group">
-                <label for="exampleInputCategory">Category</label>
+                <label for="exampleInputCategory" class="mt-3">Category</label>
                 <select class="form-control" name="category">
                   <option disabled> Select Category</option>
                   <?php
@@ -76,12 +76,12 @@ if($_SESSION["user_role"] == '0'){
                 <input type="hidden" name="old_category" value="<?php echo $row['category']; ?>">
             </div>
             <div class="form-group">
-                <label for="">Post image</label>
+                <label for="" class="mt-3">Post image</label>
                 <input type="file" name="new-image">
-                <img  src="upload/<?php echo $row['post_img']; ?>" height="150px">
+                <img  src="upload/<?php echo $row['post_img']; ?>" height="150px" class="mt-2">
                 <input type="hidden" name="old_image" value="<?php echo $row['post_img']; ?>"> 
             </div>
-            <input type="submit" name="submit" class="btn btn-primary" value="Update" />
+            <input type="submit" name="submit" class="btn btn-primary mt-4" value="Update" />
         </form>
         <!-- Form End -->
         <?php
